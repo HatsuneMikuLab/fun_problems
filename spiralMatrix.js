@@ -6,12 +6,10 @@ const spiralMatrix = function(n, num = 0, row = 0, col = -1, direction = 'R') {
         switch (direction) {
             case 'R': 
                 while (col + 1 < n && matrix[row][col + 1] === 0 && num <= n ** 2) matrix[row][++col] = ++num;
-                console.log('STEP 1: ', matrix)
                 break
 
             case 'D': 
                 while (row + 1 < n && matrix[row + 1][col] === 0 && num <= n ** 2) matrix[++row][col] = ++num;
-                console.log('STEP 2:', matrix)
                 break
             
             case 'L': 
