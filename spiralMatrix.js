@@ -26,5 +26,9 @@ const spiralMatrix = function(n, num = 0, row = 0, col = -1, direction = 'R') {
     return matrix
 };
 
-
-console.log('RESULT: ', spiralMatrix(5))
+[250, 1000, 10000].forEach((size, i) => {
+    const description = ['TEST #%s. Matrix size: %d: ', i, size];
+    console.time(...description);
+    spiralMatrix(size);
+    console.timeEnd(...description);
+})
