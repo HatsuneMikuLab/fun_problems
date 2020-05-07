@@ -2,7 +2,7 @@ const calcFibonacci = n => {
     let i = 0;
     const sequence = [0n, 1n];
     while (!sequence[n]) {
-        sequence.push(BigInt(sequence[i] + sequence[++i]))
+        sequence.push(sequence[i] + sequence[++i])
     } 
     return sequence[n]
 }
